@@ -24,6 +24,8 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 25px 12%;
+    background-color: #16051b;
+    border-bottom: solid #0000ff47 thin;
 }
 .logo img{
     max-width: 100%;
@@ -317,7 +319,7 @@ section{
     text-align: center;
     padding: 30px 50px;
     background: #11092d;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     box-shadow: rgba(48, 49, 49, 0.2) 0px 8px 24px;
     cursor: pointer;
     transition: all .42s ease;
@@ -707,7 +709,7 @@ textarea:focus, textarea:valid{
    }
    .home-txt{
        margin-bottom: 40px;
-       padding-top: 30px;
+       padding-top: 50px;
    } 
    .home-img{
        text-align: center;

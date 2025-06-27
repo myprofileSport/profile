@@ -9,16 +9,22 @@ window.addEventListener("scroll",function(){
 var __nevbar = document.getElementById("myNavBarId");  
 var __menuIcon = document.getElementById("menu-icon");
 var __nevbarBtn = document.getElementById('myNavBarId').getElementsByTagName('a');
+var __homePage = document.getElementById("homeImg");
+
 var __menuDefaultPos = true;
-/*var __downloadBtn = document.getElementById('downloadBtn');*/
+
+__homePage.onclick = function(){
+    __goToHomePage();   
+} 
+function __goToHomePage(){
+    window.open('https://myprofilesport.github.io/artwork.github.in/','_self');   
+}
 
 function __toggleMenuContent(){   
-   // console.log('__menuDefaultPos  ==  '+__menuDefaultPos); 
-    if(__menuDefaultPos === true){
+      if(__menuDefaultPos === true){
         __menuIcon.style.backgroundPosition = 'right';
         __nevbar.style.left = '0';
-        __menuDefaultPos=false;
-        //console.log('__menuDefaultPos  ==  '+__menuDefaultPos); 
+        __menuDefaultPos=false;  
     }else{
             if(__menuDefaultPos === false){
             __nevbar.style.left = '-100%'; 
@@ -46,19 +52,14 @@ function __nevbarListToggle(){
 }
 
 
-
-
 var __nevbarBtn = document.getElementById('myNavBarId').getElementsByTagName('a');
 let __pictureSelected=document.querySelector(".popup-img img").getElementsByClassName('img'); 
 
 /*------------------------[ Thumbnail ]----------------------------*/
 let __thumbMum = document.getElementsByClassName('project');
 let __LargeThum = document.getElementsByClassName   ('lThumb'); 
-    
 
-/*document.querySelector('.project').onclick=__photoLoad;*/
 document.querySelector(".popup-img span").onclick = __photoHide;
-
  
 function __photoLoad(){       
     for(let index=0; index<__thumbMum.length; index++){      
@@ -70,9 +71,8 @@ function __photoLoad(){
 }      
        
 function __showLargePhoto(n){     
-         for (let i=0; i < __LargeThum.length; i++){  
-             
-             console.log("_popNum ============ "+ __LargeThum[n]);  
+         for (let i=0; i < __LargeThum.length; i++){       
+        
              __LargeThum[i].style.display='none';                        
          }   
          document.querySelector(".popup-img").style.display='block';  

@@ -16,14 +16,24 @@ var __menuIcon = document.getElementById("menu-icon");
 var __nevbarBtn = document.getElementById('myNavBarId').getElementsByTagName('a');
 var __menuDefaultPos = true;
 var __downloadBtn = document.getElementById('downloadBtn');
+var __thumbCategory = document.getElementById("_categoryId");
 
-function __toggleMenuContent(){   
-   // console.log('__menuDefaultPos  ==  '+__menuDefaultPos); 
+var _myWindow;
+_myWindow=window;
+
+
+function __closeCurrentPage(){
+     _myWindow.close();
+    console.log("Close Current window  !"); 
+
+}
+
+function __toggleMenuContent(){     
     if(__menuDefaultPos === true){
         __menuIcon.style.backgroundPosition = 'right';
         __nevbar.style.left = '0';
         __menuDefaultPos=false;
-        //console.log('__menuDefaultPos  ==  '+__menuDefaultPos); 
+  
     }else{
             if(__menuDefaultPos === false){
             __nevbar.style.left = '-100%'; 
@@ -69,31 +79,21 @@ let __thumbMum = document.getElementsByClassName('project');
 let __LargeThum = document.getElementsByClassName   ('lThumb'); 
 let __mySubjectListArr=["pencil","colorPencil","oilPastel","posterColor","Acrylic","OilPaint"]; 
 
-/*document.querySelector('.project').onclick=__photoLoad;*/
 document.querySelector(".popup-img span").onclick = __photoHide;
 
  
 function __photoLoad(){       
     for(let index=0; index<__thumbMum.length; index++){      
         __thumbMum[index].onclick=function(){            
-            __showLargePhoto(index);           
+        __selectCategory(index);               
         }                   
-    }
-  
+    }   
 }      
        
-function __showLargePhoto(n){    
-  
-    window.open(__mySubjectListArr[n]+".html", "_blank");
-    console .log("__mySubjectListArr[n]   =   "+__mySubjectListArr[n])
-
-         /*for (let i=0; i < __LargeThum.length; i++){  
-             
-             console.log("_popNum ============ "+ __LargeThum[n]);  
-             __LargeThum[i].style.display='none';                        
-         }   
-         document.querySelector(".popup-img").style.display='block';  
-         __LargeThum[n].style.display='block'; */
+function __selectCategory(n){     
+    window.open(__mySubjectListArr[n]+".html", "_blank");      
+                __closeCurrentPage();
+       
     }
 
 function __photoHide(){               
