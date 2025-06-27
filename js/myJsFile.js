@@ -16,17 +16,7 @@ var __menuIcon = document.getElementById("menu-icon");
 var __nevbarBtn = document.getElementById('myNavBarId').getElementsByTagName('a');
 var __menuDefaultPos = true;
 var __downloadBtn = document.getElementById('downloadBtn');
-var __thumbCategory = document.getElementById("_categoryId");
 
-var _myWindow;
-_myWindow=window;
-
-
-function __closeCurrentPage(){
-     _myWindow.close();
-    console.log("Close Current window  !"); 
-
-}
 
 function __toggleMenuContent(){     
     if(__menuDefaultPos === true){
@@ -91,9 +81,8 @@ function __photoLoad(){
 }      
        
 function __selectCategory(n){     
-    window.open(__mySubjectListArr[n]+".html", "_blank");      
-                __closeCurrentPage();
-       
+    window.open(__mySubjectListArr[n]+".html", "_self");     
+               
     }
 
 function __photoHide(){               

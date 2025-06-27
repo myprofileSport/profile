@@ -417,7 +417,7 @@ section{
 }
 .popup-img img{
     position: absolute;   
-    padding: 0 13%;       
+    padding: 6% 13%;       
     margin: auto;
     width: 100%;
     height: auto;
@@ -425,7 +425,7 @@ section{
 }
 .recent-project .popup-img span{
     position: absolute;    
-    top:0px;
+    top:10%;
     right: 13%;
     text-align: center;
     font-size: 28px;
