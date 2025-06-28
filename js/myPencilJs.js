@@ -17,7 +17,7 @@ __homePage.onclick = function(){
     __goToHomePage();   
 } 
 function __goToHomePage(){
-    window.open('https://myprofilesport.github.io/artwork.github.in/','_self');   
+    window.open('index.html','_self');   
 }
 
 function __toggleMenuContent(){   

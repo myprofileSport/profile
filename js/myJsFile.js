@@ -1,5 +1,5 @@
 var typed=new Typed(".input",{
-    strings:["Fine Art Teacher","Visual Artist","Graphic Designer"],
+    strings:["Fine Art Teacher","Visual Artist","Graphic Designer",],
     typespeed:70,
     backSpeed:60,
     loop:true
@@ -68,6 +68,7 @@ let __pictureSelected=document.querySelector(".popup-img img").getElementsByClas
 let __thumbMum = document.getElementsByClassName('project');
 let __LargeThum = document.getElementsByClassName   ('lThumb'); 
 let __mySubjectListArr=["pencil","colorPencil","oilPastel","posterColor","Acrylic","OilPaint"]; 
+let __homePageArr=["index.html"];
 
 document.querySelector(".popup-img span").onclick = __photoHide;
 
@@ -82,7 +83,7 @@ function __photoLoad(){
        
 function __selectCategory(n){     
     window.open(__mySubjectListArr[n]+".html", "_self");     
-               
+    window.close(__homePageArr[0]+".html");            
     }
 
 function __photoHide(){               
