@@ -5,7 +5,7 @@ window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",this.window.scrollY > 0)
 });
 
-
+let __homePageArr=["index.html"];
 var __nevbar = document.getElementById("myNavBarId");  
 var __menuIcon = document.getElementById("menu-icon");
 var __nevbarBtn = document.getElementById('myNavBarId').getElementsByTagName('a');
@@ -17,7 +17,7 @@ __homePage.onclick = function(){
     __goToHomePage();   
 } 
 function __goToHomePage(){
-    window.open('index.html','_self');   
+    window.open(__homePageArr[0],'_self');   
 }
 
 function __toggleMenuContent(){   
