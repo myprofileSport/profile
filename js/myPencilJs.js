@@ -4,7 +4,7 @@ const header = document.querySelector("header");
 window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",this.window.scrollY > 0)
 });
-
+/*window.location.href = 'http://example.com';*/
 let __homePageArr=["index.html"];
 var __nevbar = document.getElementById("myNavBarId");  
 var __menuIcon = document.getElementById("menu-icon");
@@ -17,7 +17,7 @@ __homePage.onclick = function(){
     __goToHomePage();   
 } 
 function __goToHomePage(){
-    window.open(__homePageArr[0],'_self');   
+    window.location.href = __homePageArr[0],'_self';   
 }
 
 function __toggleMenuContent(){   

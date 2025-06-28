@@ -82,7 +82,7 @@ function __photoLoad(){
 }      
        
 function __selectCategory(n){     
-    window.open(__mySubjectListArr[n]+".html", "_self");     
+    window.location.href = __mySubjectListArr[n]+".html", "_self";     
     window.close(__homePageArr[0]+".html");            
     }
 
